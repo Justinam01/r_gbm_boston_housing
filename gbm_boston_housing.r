@@ -50,8 +50,7 @@ mse <- mean((predictions - test_data$MEDV)^2)
 
 # Calcul de la racine carrée de l'erreur quadratique moyenne (RMSE)
 rmse <- sqrt(mse)
-cat("La racine carrée de l'erreur quadratique moyenne: ", round(rmse, 2))
-
+cat("La racine carrée de l'erreur quadratique moyenne: ", round(rmse, 2),"\n")
 
 # Calcul du coefficient de determination R²
 ss_res <- sum((predictions - test_data$MEDV)^2) #somme des carrées des residus
@@ -59,5 +58,4 @@ ss_tot <- sum((mean(train_data$MEDV) - test_data$MEDV)^2) #somme des carrées to
 r_squared <- 1 - (ss_res / ss_tot)
 
 cat("Le coefficient de determination R² est:", r_squared, "\n")
-
 
